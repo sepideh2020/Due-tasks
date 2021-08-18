@@ -5,11 +5,12 @@ In this mini-project users can set task for them selves and set Category for eac
 For runnung the project run the commandas below:
 
 
-
-
  django-admin startproject config
+ 
  python manage.py migrate
+ 
  python manage.py makemigrations
+ 
  python manage.py runserver
  
  
