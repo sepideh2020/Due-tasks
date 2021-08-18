@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<div  class="Table">
+<table>
+<th>Task Which are belong to {{ list_task_category.name }}</th>
+
+{% for task in list_task_category.task_set.all %}
+    <tr><td>{{ task.title | title }}</td></tr>
+
+{% endfor %}
+</table>
+</div>
+
+    {% block image %}
+
+        <img style="margin-left:950px; margin-top: -50px;" src="{% static 'images/background.png' %}">
+
+    {% endblock %}
+{% endblock %}

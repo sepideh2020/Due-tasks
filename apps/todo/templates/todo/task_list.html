@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <title>{% block index %}Task Lists{% endblock %}</title>
+<div class="Table" >
+    <table >
+
+        <th>Tasks List</th>
+
+        {% for task in task_list %}
+
+            {#    <li><a href="{% url 'tasks_detail' task.slug %}">{{ task.title}}</a></li>#}
+            {#    <li><a href="#">{{ task.title}}</a></li>#}
+            <tr>
+                <td><a href="{{ task.get_absolute_url }}"> {{ task.title }} </a></td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+</div>
+
+    {% block image %}
+
+        <img style="margin-left:900px; margin-top: -200px;" src="{% static 'images/background.png' %}">
+
+    {% endblock %}
+{% endblock %}
+
+
+

@@ -1,0 +1,275 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background-color: lightblue !important;
+    background-image: none;
+}
+
+.sidebar {
+    margin-top: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    border-right: 2px solid darkslategrey;
+
+
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+
+}
+
+.sidebar a.active {
+    background-color: midnightblue;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: cornflowerblue;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+        text-decoration: none;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+        text-decoration: none;
+    }
+}
+
+.sidebar-two {
+    margin-left: 200px;
+    padding: 0;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    background-color: #f1f1f1;
+    border-right: 2px solid darkslategrey;
+
+
+}
+
+.sidebar-two a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar-two a.active {
+    background-color: midnightblue;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-two a:hover:not(.active) {
+    background-color: cornflowerblue;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    .sidebar-three {
+        width: 30%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar-two a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar-two a {
+        text-align: center;
+        float: none;
+    }
+}
+
+.sidebar-three {
+    margin-top: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    margin-left: 400px;
+    border-right: 2px solid darkslategrey;
+
+
+}
+
+.sidebar-three a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar-three a.active {
+    background-color: midnightblue;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-three a:hover:not(.active) {
+    background-color: cornflowerblue;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    .sidebar-three {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar-three a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar-three a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+.sidebar-four {
+    margin-top: 0;
+
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+
+    margin-left: 600px;
+    border-right: 2px solid darkslategrey;
+
+}
+
+.sidebar-four a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar-four a.active {
+    background-color: midnightblue;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-four a:hover:not(.active) {
+    background-color: cornflowerblue;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 700px) {
+    .sidebar-four {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar-three a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar-four a {
+        text-align: center;
+        float: none;
+    }
+}
+
+.Table {
+    margin-left: 250px;
+    padding-top: 40px;
+    text-decoration: none;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    text-decoration: none;
+
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-decoration: none;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: cornflowerblue;
+}
+
+.btn {
+    margin: 1rem;
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<div class="Table">
+    <table>
+        <th >Categories</th>
+        {% for category in categories_list %}
+
+            {#      <li><a href="{% url 'categories_group' category.slug %}">{{ category.name }}</a></li>#}
+            <tr>
+                <td><a href="{% url 'ListTaskCategory' category.slug %}"> {{ category.name }} </a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+    {% block image %}
+
+        <img style="margin-left:900px; margin-top: -600px;" src="{% static 'images/background.png' %}">
+
+    {% endblock %}
+{% endblock %}

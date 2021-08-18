@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+
+    <div class="sidebar-two ">
+        <h4 style="color: darkblue;margin-top: 10px;">Latest Tasks</h4>
+        {% for latest in latest_Task %}
+
+            <a href="{{ latest.get_absolute_url }}"> {{ latest.title }} </a>
+
+        {% endfor %}
+
+    </div>
+    <div class="sidebar-three">
+        <h4 style="color: darkblue;margin-top: 10px;">Passed Tasks</h4>
+        {% if PassedTask %}
+            {% for passed in  PassedTask %}
+
+                <a>{{ passed.title }}</a>
+            {% endfor %}
+        {% else %}
+            <h1>there is no task</h1>
+
+
+        {% endif %}
+
+    </div>
+    <div class="sidebar-four">
+        <h4  style="color: darkblue;margin-top: 10px;">Categories</h4>
+
+        {% for category in  full_category %}
+
+            <a href="{% url 'categories' %}">{{ category.name }}</a>
+        {% endfor %}
+        <h4 style="color: darkblue">Empty Category</h4>
+        {% for category in  empty_category %}
+
+            <a>{{ category.name }}</a>
+        {% endfor %}
+
+
+    </div>
+
+
+
+
+   {% block image %}
+       {{ block.super}}
+    {% endblock %}
+{% endblock %}

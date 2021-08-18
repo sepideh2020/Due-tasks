@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block main %}
+
+<div class="Table" style="margin-left: -10px ">
+    <table style="margin-left: 300px; padding-top: 150px">
+        <tr>
+            <th>Title</th>
+            <td> {{ object.title| title }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>  {{ object.description | title }}</td>
+        </tr>
+        <tr>
+            <th>Category</th>
+            <td> {{ object.category }}</td>
+        </tr>
+        <tr>
+            <th>Priority</th>
+            <td>{{ object.priority }}</td>
+        </tr>
+        <tr>
+            <th>Due Date</th>
+            <td>   {{ object.due_date }}</td>
+        </tr>
+
+        <tr>
+            <th>Created</th>
+            <td>  {{ object.created }}</td>
+        </tr>
+        <tr>
+            <th>Time to Due Date:</th>
+            <td>  {% due_date task.due_date %}</td>
+            {#        <td>   </td>#}
+        </tr>
+    </table>
+    </div>
+
+    {% block image %}
+
+        <img style="margin-left:1000px; margin-top: -200px;" src="{% static 'images/background.png' %}">
+
+    {% endblock %}
+{% endblock %}

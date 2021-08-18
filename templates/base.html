@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block index %}Index Page{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="icon" type="text/css" href="{% static 'images/calendar.svg' %}">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<div class="sidebar">
+    <a class="active" style="color: white" href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'tasks' %}">Tasks</a>
+    <a href="{% url 'categories' %}">Categories</a>
+    <a href="{% url 'admin:index' %}">Admin panel</a>
+    <a href="{% url 'add_new_task' %}">Add new task</a>
+    <a href="{% url 'add_new_category' %}">Add new Category</a>
+
+</div>
+{% block main %}
+
+    {% block image %}
+
+        <img style="margin-left:900px; margin-top: 100px;" src="{% static 'images/background.png' %}">
+
+    {% endblock %}
+{% endblock %}
+</body>
+</html>
